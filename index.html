@@ -5,132 +5,235 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <link rel="stylesheet" href="styles.css">
+  <title>Portfolio - Steve Tchibinda</title>
 
-  <title>Portfolio</title>
+  <style>
+    /* GLOBAL STYLES */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #0d0d0d;
+      color: #fff;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    h2, h3 { margin-bottom: 1rem; }
+
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #111;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav .left a { font-weight: bold; font-size: 1.2rem; }
+    nav .left p { margin: 0; font-size: 0.9rem; color: #aaa; }
+    nav .right a {
+      display: flex;
+      align-items: center;
+      margin-left: 1rem;
+      color: #fff;
+      transition: 0.3s;
+    }
+    nav .right a:hover { color: #ffcc00; }
+    nav .right i { margin-right: 0.3rem; }
+
+    main { padding: 2rem; max-width: 1200px; margin: auto; }
+
+    /* HERO */
+    .hero-section { text-align: center; padding: 4rem 1rem; }
+    .hero-section h2 { font-size: 2rem; }
+    .hero-section p { max-width: 700px; margin: 1rem auto; }
+    .hero-section .links a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #ffcc00;
+      color: #000;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .hero-section .links a:hover { background: #ffdd33; }
+
+    /* SKILLS */
+    .skills-section { padding: 4rem 1rem; text-align: center; }
+    .skills-section .cells {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .skills-section .cell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .skills-section .cell img { width: 80px; margin-bottom: 0.5rem; }
+
+    /* PROJECTS */
+    .projects-section { padding: 4rem 1rem; }
+    .projects-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      margin-top: 2rem;
+    }
+    .project-card {
+      background: #111;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .project-card img {
+      width: 100%;
+      border-radius: 5px;
+      margin-top: 0.5rem;
+    }
+    .project-links { margin-top: 1rem; }
+    .project-links .btn {
+      display: inline-block;
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background: #ffcc00;
+      color: #000;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .project-links .btn:hover { background: #ffdd33; }
+
+    /* CONTACT */
+    .contact-section { padding: 4rem 1rem; }
+    .contact-section .group { max-width: 600px; margin: auto; }
+    .contact-section form { display: flex; flex-direction: column; }
+    .contact-section label { margin-top: 1rem; }
+    .contact-section input, 
+    .contact-section textarea, 
+    .contact-section button {
+      margin-top: 0.3rem;
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: none;
+    }
+    .contact-section button {
+      margin-top: 1rem;
+      background: #ffcc00;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .contact-section button:hover { background: #ffdd33; }
+  </style>
 </head>
 <body>
+
   <!-- NAVBAR -->
   <nav>
     <div class="left">
-      <a href="/">John Doe</a>
+      <a href="/">Steve Tchibinda</a>
+      <p>Junior Front-End Developer</p>
     </div>
-
     <div class="right">
-      <a href="http://github.com" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-github"></i>
-        <span>Github</span>
-      </a>
-      
-      <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-linkedin"></i>
-        <span>Linkedin</span>
-      </a>
-      
-      <a href="mailto:john@example.com">
-        <i class="fa-solid fa-envelope"></i>
-        <span>Email</span>
-      </a>
+      <a href="https://github.com/kuluna95-del" target="_blank"><i class="fa-brands fa-github"></i>Github</a>
+      <a href="https://www.linkedin.com/in/steve-tchibinda-419a4b239/" target="_blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+      <a href="mailto:john@example.com"><i class="fa-solid fa-envelope"></i>Email</a>
     </div>
   </nav>
 
   <main>
-    <!-- SECTION 1: Hero -->
+    <!-- HERO SECTION -->
     <section class="hero-section">
-      <div class="text">
-        <h2>Hi, I'm John 👋</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ipsam assumenda est perspiciatis labore quasi, iure dignissimos, libero, omnis sint necessitatibus ad. Hic expedita eligendi tenetur quisquam id quaerat alias cumque, autem voluptatem in iure ut laudantium tempora cupiditate voluptate est nemo impedit, quidem iusto, provident aperiam. Iste, repellat aperiam!</p>
-
-        <div class="links">
-          <a href="#skills">
-            <i class="fa-solid fa-code"></i>
-            <span>Skills</span>
-          </a>
-          
-          <a href="#testimony">
-            <i class="fa-solid fa-pen"></i>
-            <span>Testimony</span>
-          </a>
-          
-          <a href="#contact">
-            <i class="fa-solid fa-envelope"></i>
-            <span>Contact</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="headshot">
-        <img src="images/hero-headshot.webp" alt="john doe headshot">
+      <h2>Hi, I'm Steve 👋</h2>
+      <p>
+        I am a junior front-end developer with a Computer Science degree from London. 
+        Currently based in France, I create modern, responsive web interfaces using HTML, CSS, and JavaScript. 
+        I continuously build new projects to grow my skills. My goal is to start my career in Japan and contribute 
+        to dynamic international teams.
+      </p>
+      <div class="links">
+        <a href="#skills"><i class="fa-solid fa-code"></i> Skills</a>
+        <a href="#projects"><i class="fa-solid fa-folder-open"></i> Projects</a>
+        <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
       </div>
     </section>
 
-    <!-- SECTION 2: Skills -->
+    <!-- SKILLS SECTION -->
     <section id="skills" class="skills-section">
       <h2>Skills</h2>
-      <div class="text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, perspiciatis iure distinctio quidem aperiam necessitatibus omnis possimus excepturi amet quos rerum? Perferendis repellat natus saepe quaerat quibusdam neque recusandae optio?
-      </div>
-
+      <p>Building clean, responsive interfaces and interactive applications.</p>
       <div class="cells">
-        <div class="cell">
-          <img src="images/html-logo.webp" alt="html logo">
-          <span>HTML</span>
-        </div>
-        
-        <div class="cell">
-          <img src="images/css-logo.webp" alt="css logo">
-          <span>CSS</span>
-        </div>
-        
-        <div class="cell">
-          <img src="images/javascript-logo.webp" alt="javascript logo">
-          <span>JavaScript</span>
-        </div>
-        
-        <div class="cell">
-          <img src="images/node-logo.webp" alt="node logo">
-          <span>Node.js</span>
-        </div>
-        
-        <div class="cell">
-          <img src="images/react-logo.webp" alt="react logo">
-          <span>React.js</span>
-        </div>
+        <div class="cell"><img src="images/html-logo.webp" alt="HTML logo"><span>HTML</span></div>
+        <div class="cell"><img src="images/css-logo.webp" alt="CSS logo"><span>CSS</span></div>
+        <div class="cell"><img src="images/javascript-logo.webp" alt="JavaScript logo"><span>JavaScript</span></div>
+        <div class="cell"><img src="images/react-logo.webp" alt="React logo"><span>React</span></div>
+        <div class="cell"><img src="images/node-logo.webp" alt="Node.js logo"><span>Node.js</span></div>
+        <div class="cell"><img src="images/mongo-logo.webp" alt="MongoDB logo"><span>MongoDB</span></div>
       </div>
     </section>
 
-    <!-- SECTION 3: Testimony -->
-    <section id="testimony" class="testimony-section">
-      <h2>Testimony</h2>
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section">
+      <h2>Projects</h2>
+      <p>Here are a few full-stack projects I have built, showcasing my skills in React, Node.js, Express, MongoDB, and APIs.</p>
+      <div class="projects-grid">
 
-      <div class="group">
-        <div class="person-details">
-          <img src="images/testimony-headshot.webp">
-          <p>John Doe</p>
-          <p>Lorem ipsum dolor sit.</p>
+        <!-- Weather App -->
+        <div class="project-card">
+          <h3>Weather App</h3>
+          <p>A full-stack weather application allowing users to search cities, view real-time weather data, and save favorite locations.</p>
+          <p><strong>Stack:</strong> React, Node.js, Express, MongoDB, OpenWeather API</p>
+          <p><strong>Features:</strong> Search cities, CRUD favorites, API integration, deployed online</p>
+          <div class="project-screenshots">
+            <a href="images/weatherapp.png" target="_blank">
+              <img src="images/weatherapp.png" alt="Weather App Screenshot">
+            </a>
+          </div>
+          <div class="project-links">
+            <a href="https://weatherapp-demo.com" target="_blank" class="btn">Live Demo</a>
+            <a href="https://github.com/username/weather-app" target="_blank" class="btn">Voir le code</a>
+          </div>
         </div>
 
-        <div class="text">
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, sint repudiandae ratione exercitationem saepe distinctio cumque quaerat nostrum laborum? Rem adipisci natus eos nemo reprehenderit, cumque nostrum enim commodi. Eum, enim vero eveniet doloremque sed veniam. Doloremque explicabo non reprehenderit expedita! Accusamus mollitia repellendus dolorum officiis libero quod deleniti cum."
+        <!-- To-Do List App -->
+        <div class="project-card">
+          <h3>To-Do List App</h3>
+          <p>A full-stack CRUD todo application where users can add, complete, edit, and delete tasks with persistent storage.</p>
+          <p><strong>Stack:</strong> React, Node.js, Express, MongoDB</p>
+          <p><strong>Features:</strong> Add/Edit/Delete tasks, mark as completed, persistent storage, deployed online</p>
+          <div class="project-screenshots">
+            <a href="images/todoapp.png" target="_blank">
+              <img src="images/todoapp.png" alt="To-Do App Screenshot">
+            </a>
+          </div>
+          <div class="project-links">
+            <a href="https://fullstack-todo-g407qcc1z-steves-projects-fd8cfd5b.vercel.app/" target="_blank" class="btn">Live Demo</a>
+            <a href="https://github.com/kuluna95-del/fullstack-todo-app" target="_blank" class="btn">Voir le code</a>
+          </div>
         </div>
+
       </div>
     </section>
 
-    <!-- SECTION 4: Contact -->
+    <!-- CONTACT SECTION -->
     <section id="contact" class="contact-section">
       <h2>Contact</h2>
-
       <div class="group">
-        <div class="text">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat fugit maiores atque architecto saepe tenetur quasi reiciendis illum sint doloremque alias inventore, asperiores maxime pariatur totam hic assumenda repudiandae, iusto quisquam nisi! Eaque doloremque perspiciatis minus voluptate dicta. A ratione autem dolor iure libero numquam voluptatem nobis laborum et corporis.
-        </div>
-
+        <p>I’m open to junior front-end opportunities and collaborations. Contact me via email or GitHub.</p>
         <form>
           <label for="name">Name</label>
           <input type="text" id="name">
@@ -145,6 +248,8 @@
         </form>
       </div>
     </section>
+
   </main>
+
 </body>
 </html>
