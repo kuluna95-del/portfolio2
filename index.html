@@ -16,6 +16,7 @@
   <title>Portfolio - Steve Tchibinda</title>
 
   <style>
+    /* GLOBAL STYLES */
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
@@ -26,6 +27,7 @@
     a { text-decoration: none; color: inherit; }
     h2, h3 { margin-bottom: 1rem; }
 
+    /* NAVBAR */
     nav {
       display: flex;
       justify-content: space-between;
@@ -42,6 +44,7 @@
       display: flex;
       align-items: center;
       margin-left: 1rem;
+      color: #fff;
       transition: 0.3s;
     }
     nav .right a:hover { color: #ffcc00; }
@@ -49,6 +52,7 @@
 
     main { padding: 2rem; max-width: 1200px; margin: auto; }
 
+    /* HERO */
     .hero-section { text-align: center; padding: 4rem 1rem; }
     .hero-section h2 { font-size: 2rem; }
     .hero-section p { max-width: 700px; margin: 1rem auto; }
@@ -60,8 +64,11 @@
       color: #000;
       border-radius: 5px;
       font-weight: bold;
+      transition: 0.3s;
     }
+    .hero-section .links a:hover { background: #ffdd33; }
 
+    /* SKILLS */
     .skills-section { padding: 4rem 1rem; text-align: center; }
     .skills-section .cells {
       display: flex;
@@ -75,56 +82,64 @@
       flex-direction: column;
       align-items: center;
     }
-    .skills-section .cell img { width: 80px; }
+    .skills-section .cell img { width: 80px; margin-bottom: 0.5rem; }
 
+    /* PROJECTS */
     .projects-section { padding: 4rem 1rem; }
     .projects-grid {
       display: grid;
       gap: 2rem;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      margin-top: 2rem;
     }
     .project-card {
       background: #111;
       padding: 1.5rem;
       border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
     .project-card img {
       width: 100%;
       border-radius: 5px;
       margin-top: 0.5rem;
     }
-    .project-links {
-      margin-top: 1rem;
-    }
+    .project-links { margin-top: 1rem; }
     .project-links .btn {
       display: inline-block;
       margin-right: 1rem;
       padding: 0.5rem 1rem;
       background: #ffcc00;
       color: #000;
-      border-radius: 5px;
       font-weight: bold;
+      border-radius: 5px;
+      transition: 0.3s;
     }
+    .project-links .btn:hover { background: #ffdd33; }
 
+    /* CONTACT */
     .contact-section { padding: 4rem 1rem; }
     .contact-section .group { max-width: 600px; margin: auto; }
     .contact-section form { display: flex; flex-direction: column; }
-    .contact-section input,
-    .contact-section textarea,
+    .contact-section label { margin-top: 1rem; }
+    .contact-section input, 
+    .contact-section textarea, 
     .contact-section button {
-      margin-top: 0.5rem;
+      margin-top: 0.3rem;
       padding: 0.5rem;
       border-radius: 5px;
       border: none;
     }
     .contact-section button {
+      margin-top: 1rem;
       background: #ffcc00;
+      color: #000;
       font-weight: bold;
       cursor: pointer;
+      transition: 0.3s;
     }
+    .contact-section button:hover { background: #ffdd33; }
   </style>
 </head>
-
 <body>
 
   <!-- NAVBAR -->
@@ -141,56 +156,70 @@
   </nav>
 
   <main>
-
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <section class="hero-section">
       <h2>Hi, I'm Steve 👋</h2>
       <p>
-        Junior front-end developer with a Computer Science degree.
-        I build modern, responsive, full-stack web applications using React, Node.js, and MongoDB.
+        I am a junior front-end developer with a Computer Science degree from London. 
+        Currently based in France, I create modern, responsive web interfaces using HTML, CSS, and JavaScript. 
+        I continuously build new projects to grow my skills. My goal is to start my career in Japan and contribute 
+        to dynamic international teams.
       </p>
       <div class="links">
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#skills"><i class="fa-solid fa-code"></i> Skills</a>
+        <a href="#projects"><i class="fa-solid fa-folder-open"></i> Projects</a>
+        <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
       </div>
     </section>
 
-    <!-- SKILLS -->
+    <!-- SKILLS SECTION -->
     <section id="skills" class="skills-section">
       <h2>Skills</h2>
+      <p>Building clean, responsive interfaces and interactive applications.</p>
       <div class="cells">
-        <div class="cell"><span>HTML</span></div>
-        <div class="cell"><span>CSS</span></div>
-        <div class="cell"><span>JavaScript</span></div>
-        <div class="cell"><span>React</span></div>
-        <div class="cell"><span>Node.js</span></div>
-        <div class="cell"><span>MongoDB</span></div>
+        <div class="cell"><img src="images/html-logo.webp" alt="HTML logo"><span>HTML</span></div>
+        <div class="cell"><img src="images/css-logo.webp" alt="CSS logo"><span>CSS</span></div>
+        <div class="cell"><img src="images/javascript-logo.webp" alt="JavaScript logo"><span>JavaScript</span></div>
+        <div class="cell"><img src="images/react-logo.webp" alt="React logo"><span>React</span></div>
+        <div class="cell"><img src="images/node-logo.webp" alt="Node.js logo"><span>Node.js</span></div>
+        <div class="cell"><img src="images/mongo-logo.webp" alt="MongoDB logo"><span>MongoDB</span></div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- PROJECTS SECTION -->
     <section id="projects" class="projects-section">
       <h2>Projects</h2>
-
+      <p>Here are a few full-stack projects I have built, showcasing my skills in React, Node.js, Express, MongoDB, and APIs.</p>
       <div class="projects-grid">
 
-        <!-- WEATHER APP -->
+        <!-- Weather App -->
         <div class="project-card">
           <h3>Weather App</h3>
-          <p>Full-stack weather app with city search, real-time data, and saved favorites.</p>
+          <p>A full-stack weather application allowing users to search cities, view real-time weather data, and save favorite locations.</p>
           <p><strong>Stack:</strong> React, Node.js, Express, MongoDB, OpenWeather API</p>
+          <p><strong>Features:</strong> Search cities, CRUD favorites, API integration, deployed online</p>
+          <div class="project-screenshots">
+            <a href="images/weatherapp.png" target="_blank">
+              <img src="images/weatherapp.png" alt="Weather App Screenshot">
+            </a>
+          </div>
           <div class="project-links">
-            <a href="https://portfolio2-4mx2-8snx4hrd3-steves-projects-fd8cfd5b.vercel.app/" target="_blank" class="btn">Live Demo</a>
+            <a href="https://portfolio2-4mx2.vercel.app/" target="_blank" class="btn">Live Demo</a>
             <a href="https://github.com/kuluna95-del/weatherapplication" target="_blank" class="btn">Voir le code</a>
           </div>
         </div>
 
-        <!-- TODO APP -->
+        <!-- To-Do List App -->
         <div class="project-card">
-          <h3>To-Do App</h3>
-          <p>Full-stack CRUD todo app with persistent storage.</p>
+          <h3>To-Do List App</h3>
+          <p>A full-stack CRUD todo application where users can add, complete, edit, and delete tasks with persistent storage.</p>
           <p><strong>Stack:</strong> React, Node.js, Express, MongoDB</p>
+          <p><strong>Features:</strong> Add/Edit/Delete tasks, mark as completed, persistent storage, deployed online</p>
+          <div class="project-screenshots">
+            <a href="images/todoapp.png" target="_blank">
+              <img src="images/todoapp.png" alt="To-Do App Screenshot">
+            </a>
+          </div>
           <div class="project-links">
             <a href="https://fullstack-todo-g407qcc1z-steves-projects-fd8cfd5b.vercel.app/" target="_blank" class="btn">Live Demo</a>
             <a href="https://github.com/kuluna95-del/fullstack-todo-app" target="_blank" class="btn">Voir le code</a>
@@ -200,14 +229,21 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- CONTACT SECTION -->
     <section id="contact" class="contact-section">
       <h2>Contact</h2>
       <div class="group">
+        <p>I’m open to junior front-end opportunities and collaborations. Contact me via email or GitHub.</p>
         <form>
-          <input type="text" placeholder="Name">
-          <input type="email" placeholder="Email">
-          <textarea rows="5" placeholder="Message"></textarea>
+          <label for="name">Name</label>
+          <input type="text" id="name">
+
+          <label for="email">Email</label>
+          <input type="email" id="email">
+
+          <label for="message">Message</label>
+          <textarea id="message" cols="30" rows="10"></textarea>
+
           <button type="submit">Send Message</button>
         </form>
       </div>
